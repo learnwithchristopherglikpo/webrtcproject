@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>WebRTC App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <style>
+        #chat-area::-webkit-scrollbar {
+            display: none;
+        }
+
+    </style> -->
+
+</head>
+
+<body>
+    <div class="main-wrap">
+        <div class="call-wrap card" style="z-index: 99">
+            <video id="local-video" autoplay></video>
+            <div class="row remote-video-wrap" style="position: relative;">
+                <div class="call-hang-status" style="position: absolute; z-index:999">
+
+                </div>
+                <video id="remote-video" autoplay></video>
+            </div>
+            <div class="record-action">
+                <button id="start-recording" class="btn btn-small waves-effect red" disabled>Start Recording</button>
+                <button id="download-video" class="btn btn-small waves-effect teal" disabled> Download Vedio</button>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <input type="text" name="" id="username-input" placeholder="Username">
+                    <button id="call-btn" class="btn waves-effect"> Call</button>
+                </div>
+            </div>
+        </div>
+        <div class="chat-wrap card">
+            <div class="row">
+                <div class="col m12 white">
+                    <div class="card-title">Text Chat</div>
+                    <div id="chat-area" style="display: flex;flex-direction: column;width: 100%;overflow-y: scroll;"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <input type="text" placeholder="Message" name="" id="msg-input">
+                    <button id="msg-sent-btn" class="btn waves-effect">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
+    <script src="assets/js/client.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WebRtc app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+
+</head>
+
+<body>
+    <div class="login-wrap">
+        <div class="row">
+            <div class="col s12 m8 l4 offset-m2 offset-l4">
+                <div class="card">
+                    <div class="card-action teal lighten-1 white-text">
+                        <h3>Login Form</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="form-field">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username">
+                        </div>
+                        <br>
+                        <div class="form-field">
+                            <button class="webrtc-login btn-large waves-effect waves-dark">
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector("button.webrtc-login").onclick = function() {
+            var username = document.querySelector('#username').value;
+            window.location.replace("index.html?username=" + username + "");
+        }
+
+    </script>
+</body>
+
+</html>
